@@ -18,7 +18,7 @@ Functions for extracting connectivity patterns among univariate and multivariate
 
 ## Demonstration
 
-Run the program demo_ar2_coh to return power spectral densities, coherence, and lagged coherence for a simulated ten node network.  This program will generate the figures provided in the images/coherence_ar2_60cyc directory, and provides examples of function calling and variable passing to demonstrate pipeline development using the provided functions. 
+Run the program demo_ar2_coh to return power spectral densities, coherence, and lagged coherence for a simulated ten node network.  This program will generate the figures provided in the images/coh_ar2_60cyc directory, and provides examples of function calling and variable passing to demonstrate pipeline development using the provided functions. 
 
  Demo Data: The attached .mat file contains the simulated data in a times by trials by channels array. 10 channels each consisting of 100 2 sec epochs were generated. The simulated time series consist of a set of coupled AR(2) processes with update parameters 0.55 and -0.81 and a simulated sampling rate of 200 Hz, yielding a peak frequency of 40 Hz and temporal decay multiplier equal to 0.9.  The following channels are coupled with a time lag of 1 data index (0.005 sec) with coupling constant 0.5
 
