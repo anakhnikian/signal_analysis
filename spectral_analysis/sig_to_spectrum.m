@@ -50,8 +50,3 @@ else
 end
 
 
-% %Get output arrays
-
-% sig_col_repeated = repmat(sig_chan_lead,n_chans,1,1,1);%row-col repetition to copy channels
-% expanded_dims    = [n_chans,n_chans,last_freq_index,n_trials,n_tapers];
-% s_trials         = reshape(sig_col_repeated,expanded_dims); %reshape to channels in row-column correspondence
