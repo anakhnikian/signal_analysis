@@ -70,11 +70,3 @@ switch type
         end
 end
 
-%FUNCTION: 
-%
-%INPUT:
-%
-%
-%OUTPUT:
-%
-%
