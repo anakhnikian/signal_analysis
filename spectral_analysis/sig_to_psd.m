@@ -6,7 +6,7 @@ function [psd,frq_ax] = sig_to_psd(sig,fs,taper)
 %
 %INPUT:
 %
-%       signal: A times by trials matrix
+%       sig: A times by trials matrix
 %
 %       fs: sampling rate in Hz
 %
@@ -17,6 +17,8 @@ function [psd,frq_ax] = sig_to_psd(sig,fs,taper)
 %       psd: a one-side power spectrum
 %
 %       frq_ax: The frequency axis in Hz
+%
+%A. Nakhnikian 2024
 
 [s, bw_factor, frq_ax] = sig_to_spectrum(sig,fs,taper); 
 energy = s.*conj(s);
