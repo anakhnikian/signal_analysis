@@ -39,7 +39,7 @@ function demo_ar2_coh()
 %% get data, analysis parameters, and tapers
 load('ar_2_model.mat','data');
 addpath('./spectral_analysis')
-addpath('./connectivity_measures/')
+addpath('./connectivity_measures/linear')
 
 %set sampling rate and get taper
 fs = 200;
