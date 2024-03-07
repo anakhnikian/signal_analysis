@@ -27,9 +27,9 @@ function [sdm] = spectrum_to_sdm(spectra, bw_factor)
 %small data sets. In that case, adding a vectorize option for
 %small data would be worth it
 
-n_freqs = size(spectra,1);
-n_trials   = size(spectra,2);
-n_chans  = size(spectra,3);
+n_freq = size(spectra,1);
+n_freqs   = size(spectra,2);
+n_trials  = size(spectra,3);
 n_tapers  = size(spectra,4);
 
 %nested for loops are slightly slower than vectorizing for small data but
@@ -39,8 +39,8 @@ for chan1 = 1:n_chans
     %generate full matrix, shortening the loop isn't worth the time suck to
     %add back the lower half Hermitian for trial sizes around 2000 or more
     for chan2 = 1:n_chans 
-        x = squeeze(spectra(:,:,chan1,:));
-        y = squeeze(spectra(:,:,chan2,:));
+        x = squeeze(spectra(chan1,:,:,:));
+        y = squeeze(spectra(chan2,:,:,:));
         trial_array(chan1,chan2,:,:,:) = x.*conj(y);
     end
 end

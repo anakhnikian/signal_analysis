@@ -12,7 +12,7 @@ function [taper,vals] = get_taper(n_times,type,opt)
 %
 %   type:   'hann'
 %           'hamming'
-%           'blackman_harris'
+%           'blackman-harris'
 %           'dpss'
 %
 %   name-value pairs: These are used to specify multitaper parameters
@@ -70,3 +70,11 @@ switch type
         end
 end
 
+%FUNCTION: 
+%
+%INPUT:
+%
+%
+%OUTPUT:
+%
+%

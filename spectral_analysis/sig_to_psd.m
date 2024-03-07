@@ -22,5 +22,5 @@ function [psd,frq_ax] = sig_to_psd(sig,fs,taper)
 
 [s, bw_factor, frq_ax] = sig_to_spectrum(sig,fs,taper); 
 energy = s.*conj(s);
-psd = mean(energy,2)./bw_factor;
+psd = mean(energy,[2,3])./bw_factor;
 psd(2:end) = 2*psd(2:end); %double everything except last frequency

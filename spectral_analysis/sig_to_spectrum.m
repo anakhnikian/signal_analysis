@@ -16,7 +16,7 @@ function [s_trials, bw_factor, frq_ax] = sig_to_spectrum(sig,fs,taper)
 %
 %OUTPUT:
 %
-%   s_trials: Channels by channels by n_frequencies by n_trials arrays where each
+%   s_trials: Channels by n_frequencies by n_trials by n_tapers arrays where each
 %   matrix in the rows and columns is a Hermitian matrix with raw complex coherency
 %   values
 %
@@ -42,11 +42,6 @@ frq_ax = 0:df:floor(fs/2)-df;
 
 %Fourier transform, remove negative frequencies
 sig_ft   = fft(sig_tapered);
-sig_ft_pos = sig_ft(1:last_freq_index,:,:,:);
-if ~ismatrix(sig_ft) %more than one channel -> switch to channel in lead dim
-    s_trials = permute(sig_ft_pos,[3,1,2,4,5]); %chan,time,freq,trial,taper
-else
-    s_trials = sig_ft_pos;
-end
+s_trials = sig_ft(1:last_freq_index,:,:,:);
 
 
