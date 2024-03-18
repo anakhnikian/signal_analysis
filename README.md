@@ -2,6 +2,8 @@
 
 This repository contains a collection of spectral analysis and connectivity measures for analyzing physical and biological time series. 
 
+Connectivity measures include standard linear analyses along with non-linear information theoretic measures. 
+
 See documentation of individual functions for a full list of functionality and options
 
 ## Spectral analysis 
@@ -15,6 +17,8 @@ Functions for extracting connectivity patterns among univariate and multivariate
 -lagged coherence (removes zero-lag effect)
 
 -partial coherence (regresses out mediated connections)
+
+-local mutual information (time-resolved from multi-trial data, assumes cyclostationarity)
 
 ## Demonstration
 
